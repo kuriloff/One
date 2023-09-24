@@ -1,13 +1,14 @@
 package One;
 
 public class Member {
+    public static int counter = 0;
     private char memberType; private int memberID; private String name; private double fees;
 
     public Member(char pMemberType, int pMemberID, String pName, double pFees) {
-        memberType = memberType;
-        memberID = memberID;
-        name = name;
-        fees = fees;
+        memberType = pMemberType;
+        memberID = pMemberID;
+        name = pName;
+        fees = pFees;
     }
 
     public char getMemberType() {
@@ -44,10 +45,8 @@ public class Member {
 
     @Override
     public String toString() {
-        return "Member{" +
-                "memberType=" + memberType +
-                ", memberID=" + memberID +
-                ", name='" + name + '\'' +
+        return "Customer name: " + name +
+                ", ID=" + memberID +
                 ", fees=" + fees +
                 '}';
     }
